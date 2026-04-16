@@ -1,5 +1,7 @@
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
+  const { service } = req.body;
+
   res.status(200).json({
-    message: "MarketGravity API is working"
+    message: `Searching for clients for: ${service}`
   });
 };
