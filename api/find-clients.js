@@ -14,6 +14,18 @@ module.exports = async (req, res) => {
   const { service } = req.body || {};
 
   res.status(200).json({
-    message: `Searching for clients for: ${service}`
-  });
-};
+  results: [
+    {
+      name: "Luxury Wedding Planner Ltd",
+      location: "London",
+      reason: "Works with high-end weddings and may need photographers",
+      contact: "info@luxweddings.com"
+    },
+    {
+      name: "Elite Events Co",
+      location: "Manchester",
+      reason: "Organises premium events and weddings",
+      contact: "contact@eliteevents.co.uk"
+    }
+  ]
+});
